@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrer website</title>
+</head>
+<style>
+    h1 {
+        font-size: 40px;
+        font-family: Roboto;
+        font-weight: normal;
+        color: rgb(50, 50, 50);
+        text-align: center;
+    }
+
+    #banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+
+    }
+
+    h2 {
+        font-family: roboto;
+        font-size: 32px;
+        color: rgb(100, 100, 100);
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .bodyText {
+        font-family: roboto;
+        color: rgb(80, 80, 80);
+    }
+
+    #container {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1>{{company_name}}</h1>
+        <img id="banner" src="static/banner.jpg" />
+        <h2>About</h2>
+        <p class="bodyText">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Turpis egestas sed tempus urna et pharetra. Pharetra diam sit amet nisl suscipit adipiscing
+            bibendum. A pellentesque sit amet porttitor eget dolor. Ac tincidunt vitae semper quis. Mi in nulla posuere
+            sollicitudin aliquam. Malesuada nunc vel risus commodo viverra maecenas. Iaculis at erat pellentesque
+            adipiscing
+            commodo. Massa sapien faucibus et molestie. At volutpat diam ut venenatis tellus in metus vulputate eu.
+            Mauris
+            cursus mattis molestie a iaculis at erat pellentesque adipiscing. Nisl suscipit adipiscing bibendum est
+            ultricies.
+        </p>
+        <h2>
+            Open Positons
+        </h2>
+        <p>{% for job in jobs %}
+            {%include 'jobItem.html'%}
+            {%endfor%}
+        </p>
+        <div style="text-align: center;">
+            <button>Contact us</button>
+            <p>Copyright 2024,Carrer</p>
+        </div>
+    </div>
+</body>
+
+</html>
